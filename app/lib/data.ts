@@ -56,6 +56,8 @@ export async function fetchLatestInvoices() {
 }
 
 export async function fetchCardData() {
+  throw new Error('Failed to fetchCardData');
+
   noStore();
   try {
     // You can probably combine these into a single SQL query
@@ -130,6 +132,7 @@ export async function fetchFilteredInvoices(
 
 export async function fetchInvoicesPages(query: string) {
   noStore();
+
   try {
     const count = await sql`SELECT COUNT(*)
     FROM invoices
