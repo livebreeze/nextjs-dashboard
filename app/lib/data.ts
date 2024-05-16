@@ -56,8 +56,6 @@ export async function fetchLatestInvoices() {
 }
 
 export async function fetchCardData() {
-  throw new Error('Failed to fetchCardData');
-
   noStore();
   try {
     // You can probably combine these into a single SQL query
