@@ -2,7 +2,10 @@ import SideNav from '@/app/ui/dashboard/sidenav';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: `Invoices | Sean's Dashboard`,
+  title: {
+    template: `Invoices %s | Sean's Dashboard`,
+    default: `Invoices`,
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
